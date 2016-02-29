@@ -23,7 +23,7 @@ public class TestCounterServiceImpl {
 		
 		try {
 		
-		AccountOutput testOutput = new AccountOutput("AE", 6);
+		AccountOutput testOutput = new AccountOutput("AE",6);
 		
 		AustinEntity newEntity = mock(AustinEntity.class); // Create mock dependency: mock()	
 		
@@ -31,7 +31,7 @@ public class TestCounterServiceImpl {
 		
 		AccountOutput result = counterService.countAccount("AE");
 					
-		assertEquals(testOutput, result);
+		assertEquals(testOutput.getNum_of_types(), result.getNum_of_types());
 					
 		verify(result).getAccount();
 		

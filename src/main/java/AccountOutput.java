@@ -21,7 +21,7 @@ public class AccountOutput {
 	
      @Override
      public String toString() {
-    	 String finalOutput = "account: " + account + " num_of_types " + num_of_types;
+    	 String finalOutput = "account: " + account + " num_of_types: " + num_of_types;
 		 return finalOutput;
      }
 	    
