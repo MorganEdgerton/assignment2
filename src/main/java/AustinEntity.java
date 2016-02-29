@@ -42,7 +42,11 @@ public class AustinEntity {
 	 }
 		    
 	 public String getType() {
-		    return type;
+		 if(this.type != null)
+			 return type;
+		 else{
+			 return "no type";
+		 }   	 
 	 }
 
 	

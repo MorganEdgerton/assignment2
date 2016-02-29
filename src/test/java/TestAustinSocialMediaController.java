@@ -19,11 +19,11 @@ public class TestAustinSocialMediaController {
 		mediaController.setCounterService(mockCounter);
 	}
 	
-	@Test
+	@Test //dont count this test
 	public void thisAlwaysPasses() {
     }
 	
-	@Test
+	@Test //dont count this test
 	public void testHelloWorld() {
 		String reply = mediaController.helloWorld();
 		assertEquals("Hello world!", reply);
@@ -77,46 +77,5 @@ public class TestAustinSocialMediaController {
 		assertEquals(testAccountOutput, mediaCountOutput); 
 		verify(mockCounter).countAccount("AE");
 	}
-//	@Test
-//	public void testGetGreetingCorrectActionCompose() {
-//		when(mockEditor.composeEmail()).thenReturn("test email");
-//		String reply = emailController.getGreeting("compose");
-//		assertEquals("test email", reply);
-//		verify(mockEditor).thisIsVoidFunction();
-//	}
-//	
-//	@Test
-//	public void testGetGreetingCorrectActionCreate() {
-//		when(mockEditor.composeEmail()).thenReturn("test email");
-//		String reply = emailController.getGreeting("create");
-//		assertEquals("test email", reply);
-//	}
-//		
-//	@Test
-//	public void testGetGreetingCorrectActionCapital() {
-//		when(mockEditor.composeEmail()).thenReturn("test email");
-//		String reply = emailController.getGreeting("COMPOSE");
-//		assertEquals("test email", reply);
-//	}
-//		
-//	@Test
-//	public void testGetGreetingIncorrectAction() {
-//		String reply = emailController.getGreeting("ajdfksdhj");
-//		assertEquals("", reply);
-//		verify(mockEditor, never()).composeEmail();
-//	}
-//	
-//	@Test
-//	public void testGetGreetingNullAction() {
-//		String reply = emailController.getGreeting(null);
-//		assertEquals("", reply);
-//		verify(mockEditor, never()).composeEmail();		
-//	}
-//	
-//	@Test
-//	public void testWithGhostObject() {
-//		when(mockEditor.composeEmail()).thenReturn("test email");		
-//		String reply = emailController.getWithGhostEditor();
-//		assertEquals("test email", reply);		
-//	}	
+
 }

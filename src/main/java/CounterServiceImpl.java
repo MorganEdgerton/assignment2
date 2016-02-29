@@ -41,7 +41,7 @@ public class CounterServiceImpl implements CounterService {
 	
 
 	public AccountOutput countAccount(String account) {
-	// iterate and count # of enties of 'account' in datalink
+	// iterate and count # of entites of 'account' in datalink
 	int count = 0;
 	String accountTitle = account;
 	if(account!=null){
@@ -51,7 +51,9 @@ public class CounterServiceImpl implements CounterService {
    	 		if(account.toLowerCase().equals(curr.getAccount().toLowerCase())){
    	 			System.out.println("curr.getAccount(): " + curr.getAccount());
    	 			accountTitle = curr.getAccount(); 
-   	 			count++;
+   	 			if(curr.getType() != "no type"){ //*I aint got no...
+   	 				count++;
+   	 			}
    	 		}
    	 	}
     }
