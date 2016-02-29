@@ -35,8 +35,13 @@ public class AustinSocialMediaController {
 	public Object findMediaCount(
 	@RequestParam Map<String,String> requestParams, ModelMap model) {
 		System.out.println("IN REQUEST");
+		System.out.println("MODEL " + model);
+		if(model == null){
+			System.out.println("MODEL is NULL");
+		}
 		
 		Map.Entry<String,String> entry= requestParams.entrySet().iterator().next();
+		System.out.println("ENTRY key: " + entry.getKey() + " val: " + entry.getValue());
 		String key= entry.getKey();
 		String value=entry.getValue();
 		if(key.toLowerCase().equals("typestats")){
